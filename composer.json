@@ -1,0 +1,19 @@
+{
+    "name": "scoringline/gmail-api",
+    "description": "PHP wrapper for the gmail API",
+    "require": {
+        "php": ">=5.4",
+        "nekland/base-api": "~1.0",
+        "guzzlehttp/guzzle": "~5.0",
+        "namshi/jose": "~1.2"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.1"   
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": { "Scoringline\\": "src/" }
+    }
+}
