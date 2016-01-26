@@ -6,6 +6,11 @@ use Nekland\BaseApi\Api\AbstractApi;
 
 class Email extends AbstractApi
 {
+    const LABEL_UNREAD = 'UNREAD';
+    const LABEL_INBOX = 'INBOX';
+    const LABEL_IMPORTANT = 'IMPORTANT';
+    const LABEL_SPAM = 'SPAM';
+
     /**
      * @var string The user account
      */
@@ -40,6 +45,22 @@ class Email extends AbstractApi
     public function getMessage($id, array $options = [])
     {
         return $this->get($this->getUrl() . '/' . $id, $options);
+    }
+
+    /**
+     * Modify labels on a given email
+     *
+     * @param $id
+     * @param array $options
+     * @return array
+     */
+    public function modifyMessage($id, array $options = [])
+    {
+        return $this->post(
+            $this->getUrl() . '/' . $id . '/modify',
+            json_encode($options),
+            ['Content-Type' => 'application/json']
+        );
     }
 
     /**
