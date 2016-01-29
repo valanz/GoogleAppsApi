@@ -78,7 +78,7 @@ class ApiAuth implements AuthStrategyInterface
     private function getPrivateKey()
     {
         $file            = $this->getOption('cert_file');
-        $res             = array();
+        $res             = [];
         $brutCertificate = file_get_contents($file);
 
         $worked = openssl_pkcs12_read($brutCertificate, $res, $this->getOption('cert_password', 'notasecret'));

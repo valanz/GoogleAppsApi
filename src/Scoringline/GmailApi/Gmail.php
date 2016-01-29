@@ -25,9 +25,7 @@ class Gmail extends ApiFactory
      */
     public function __construct(array $options = [])
     {
-        if ($options) {
-            $this->options = array_merge($this->options, $options);
-        }
+        $this->options = array_merge($this->options, $options);
 
         parent::__construct(new HttpClientFactory($this->options));
 
