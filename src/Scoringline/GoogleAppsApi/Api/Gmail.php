@@ -1,10 +1,10 @@
 <?php
 
-namespace Scoringline\GmailApi\Api;
+namespace Scoringline\GoogleAppsApi\Api;
 
 use Nekland\BaseApi\Api\AbstractApi;
 
-class Email extends AbstractApi
+class Gmail extends AbstractApi
 {
     const LABEL_UNREAD = 'UNREAD';
     const LABEL_INBOX = 'INBOX';
@@ -77,7 +77,7 @@ class Email extends AbstractApi
 
     /**
      * @param $user
-     * @return Email
+     * @return Gmail
      */
     public function setUser($user)
     {

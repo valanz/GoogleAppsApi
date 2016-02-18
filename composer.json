@@ -1,6 +1,6 @@
 {
-    "name": "scoringline/gmail-api",
-    "description": "PHP wrapper for the gmail API",
+    "name": "scoringline/google-apps-api",
+    "description": "PHP wrapper for the Google Apps API",
     "require": {
         "php": ">=5.4",
         "nekland/base-api": "~1.0",

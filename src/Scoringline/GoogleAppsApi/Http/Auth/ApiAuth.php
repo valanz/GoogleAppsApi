@@ -1,6 +1,6 @@
 <?php
 
-namespace Scoringline\GmailApi\Http\Auth;
+namespace Scoringline\GoogleAppsApi\Http\Auth;
 
 use Namshi\JOSE\JWS;
 use Nekland\BaseApi\Exception\MissingOptionException;
@@ -15,7 +15,6 @@ class ApiAuth implements AuthStrategyInterface
      * @var array
      */
     private $options = [
-        'scope'      => 'https://www.googleapis.com/auth/gmail.readonly',
         'token_path' => 'https://www.googleapis.com/oauth2/v3/token',
     ];
 
@@ -116,7 +115,12 @@ class ApiAuth implements AuthStrategyInterface
      */
     public function setOptions(array $options)
     {
-        if (empty($options['cert_file']) || empty($options['email']) || empty($options['user_email'])) {
+        if (
+            empty($options['cert_file']) ||
+            empty($options['email']) ||
+            empty($options['user_email']) ||
+            empty($options['scope'])
+        ) {
             throw new MissingOptionException('Missing options');
         }
 
