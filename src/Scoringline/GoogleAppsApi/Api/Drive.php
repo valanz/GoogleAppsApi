@@ -59,12 +59,15 @@ class Drive extends AbstractApi
      *
      * @param string $fileId
      * @param array $options
-     * @param array $headers
      * @return array
      */
-    public function copyFile($fileId, array $options = [], array $headers = [])
+    public function copyFile($fileId, array $options = [])
     {
-        return $this->post($this->getUrl() . $fileId . '/copy', json_encode($options, JSON_UNESCAPED_SLASHES), $headers);
+        return $this->post(
+            $this->getUrl() . $fileId . '/copy',
+            json_encode($options, JSON_UNESCAPED_SLASHES),
+            ['Content-Type' => 'application/json']
+        );
     }
 
     /**
@@ -102,10 +105,10 @@ class Drive extends AbstractApi
      * @param array $headers
      * @return array
      */
-    public function exportFile($fileId, array $options = [], $headers = [])
+    public function exportFile($fileId, array $options = [])
     {
         $this->setTransformer(new RawTransformer());
 
-        return $this->get($this->getUrl() . $fileId . '/export', $options, $headers);
+        return $this->get($this->getUrl() . $fileId . '/export', $options);
     }
 }

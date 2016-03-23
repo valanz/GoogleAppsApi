@@ -2,9 +2,6 @@
 
 namespace spec\Scoringline\GoogleAppsApi\Http\Auth;
 
-use Nekland\BaseApi\Http\AbstractHttpClient;
-use Nekland\BaseApi\Http\Event\RequestEvent;
-use Nekland\BaseApi\Http\Request;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
