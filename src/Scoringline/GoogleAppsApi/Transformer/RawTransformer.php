@@ -11,7 +11,7 @@ class RawTransformer implements TransformerInterface
      * @param  string $type Type of data that is sent
      * @return mixed
      */
-    public function transform($data, $type = self::UNKNOWN)
+    public function transform($data, $type = TransformerInterface::UNKNOWN)
     {
         return $data;
     }

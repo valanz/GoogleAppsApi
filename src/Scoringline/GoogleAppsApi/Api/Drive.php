@@ -102,7 +102,6 @@ class Drive extends AbstractApi
      *
      * @param string $fileId
      * @param array $options
-     * @param array $headers
      * @return array
      */
     public function exportFile($fileId, array $options = [])

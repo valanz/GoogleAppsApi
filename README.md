@@ -15,6 +15,7 @@
     require "vendor/autoload.php";
 
     use Scoringline\GoogleAppsApi\GoogleApps;
+    use Scoringline\GoogleAppsApi\Api\Scope;
 
     $api = new GoogleApps();
     
@@ -22,7 +23,7 @@
         'cert_file' => 'my-cert-file.p12',
         'email' => 'foobar@baz.iam.gserviceaccount.com',
         'user_email' => 'john@doe.com',
-        'scope' => 'https://www.googleapis.com/auth/gmail.readonly',
+        'scope' => Scope::GMAIL_READONLY,
     ]);
 ```
 
