@@ -85,4 +85,12 @@ class Gmail extends AbstractApi
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getLabels()
+    {
+        return $this->get('/gmail/v1/users/' . $this->user . '/labels');
+    }
 }
