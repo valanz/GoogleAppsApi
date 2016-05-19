@@ -110,4 +110,26 @@ class Drive extends AbstractApi
 
         return $this->get($this->getUrl() . $fileId . '/export', $options);
     }
+
+    /**
+     * Delete a specific file
+     * @link https://developers.google.com/drive/v3/reference/files/delete
+     *
+     * @param string $fileId
+     * @return array
+     */
+    public function deleteFile($fileId)
+    {
+        return $this->delete($this->getUrl() . $fileId);
+    }
+
+    /**
+     * Empty the trash bin
+     * @link https://developers.google.com/drive/v3/reference/files/emptyTrash
+     * @return array
+     */
+    public function emptyTrash()
+    {
+        return $this->delete($this->getUrl() . 'trash');
+    }
 }
