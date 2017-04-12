@@ -1,13 +1,13 @@
-#GoogleAppsApi
+# GoogleAppsApi
 
-##PHP wrapper for the Google apps API
+## PHP wrapper for the Google apps API
 
-###Available Google apps
+### Available Google apps
 
 - [Gmail](#gmail)
 - [Drive](#drive)
 
-###Authentication
+### Authentication
 
 ```php
     <?php
@@ -27,7 +27,7 @@
     ]);
 ```
 
-###Gmail
+### Gmail
 
 ```php
     $messages = $api->getEmailApi()->getMessages(['maxResults' => 2]);
@@ -37,7 +37,7 @@
     }
 ```
 
-###Drive
+### Drive
 
 ```php
     $files = $api->getDriveApi()->getFiles();
