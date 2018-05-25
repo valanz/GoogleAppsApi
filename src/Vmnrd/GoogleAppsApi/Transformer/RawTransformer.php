@@ -1,6 +1,5 @@
-<?php
-
-namespace Scoringline\GoogleAppsApi\Transformer;
+<?php declare(strict_types=1);
+namespace Vmnrd\GoogleAppsApi\Transformer;
 
 use Nekland\BaseApi\Transformer\TransformerInterface;
 

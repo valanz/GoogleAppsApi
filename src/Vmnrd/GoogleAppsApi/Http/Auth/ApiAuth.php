@@ -1,6 +1,5 @@
-<?php
-
-namespace Scoringline\GoogleAppsApi\Http\Auth;
+<?php declare(strict_types=1);
+namespace Vmnrd\GoogleAppsApi\Http\Auth;
 
 use Namshi\JOSE\JWS;
 use Nekland\BaseApi\Exception\MissingOptionException;
@@ -26,7 +25,7 @@ class ApiAuth implements AuthStrategyInterface
     /**
      * @param RequestEvent $requestEvent
      */
-    public function auth(RequestEvent $requestEvent)
+    public function auth(RequestEvent $requestEvent): void
     {
         $request = $requestEvent->getRequest();
 

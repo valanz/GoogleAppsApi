@@ -1,6 +1,5 @@
-<?php
-
-namespace Scoringline\GoogleAppsApi\Api;
+<?php declare(strict_types=1);
+namespace Vmnrd\GoogleAppsApi\Api;
 
 use Nekland\BaseApi\Api\AbstractApi;
 

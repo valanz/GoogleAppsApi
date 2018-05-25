@@ -14,8 +14,8 @@
 
     require "vendor/autoload.php";
 
-    use Scoringline\GoogleAppsApi\GoogleApps;
-    use Scoringline\GoogleAppsApi\Api\Scope;
+    use Vmnrd\GoogleAppsApi\GoogleApps;
+    use Vmnrd\GoogleAppsApi\Api\Scope;
 
     $api = new GoogleApps();
     

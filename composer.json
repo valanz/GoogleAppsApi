@@ -1,8 +1,8 @@
 {
-    "name": "scoringline/google-apps-api",
+    "name": "vmnrd/google-apps-api",
     "description": "PHP wrapper for the Google Apps API",
     "require": {
-        "php": ">=5.4",
+        "php": ">=7.1",
         "nekland/base-api": "~1.0",
         "guzzlehttp/guzzle": "~5.0",
         "namshi/jose": "~1.2"
@@ -14,6 +14,6 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-0": { "Scoringline\\": "src/" }
+        "psr-4": { "Vmnrd\\": "src/" }
     }
 }

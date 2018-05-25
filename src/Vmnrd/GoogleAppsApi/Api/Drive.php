@@ -1,9 +1,8 @@
-<?php
-
-namespace Scoringline\GoogleAppsApi\Api;
+<?php declare(strict_types=1);
+namespace Vmnrd\GoogleAppsApi\Api;
 
 use Nekland\BaseApi\Api\AbstractApi;
-use Scoringline\GoogleAppsApi\Transformer\RawTransformer;
+use Vmnrd\GoogleAppsApi\Transformer\RawTransformer;
 
 class Drive extends AbstractApi
 {
